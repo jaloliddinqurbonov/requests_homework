@@ -19,3 +19,9 @@ Your implementation below:
 """
 
 # Your implementation here
+import requests
+import json
+post_id=int(input('idni kriting '))
+response=requests.get(f"https://jsonplaceholder.typicode.com/posts/{post_id}")
+data=response.json()
+print(data)

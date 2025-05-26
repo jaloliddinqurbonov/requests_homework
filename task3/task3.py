@@ -22,3 +22,13 @@ Your implementation below:
 """
 
 # Your implementation here
+import requests
+import json
+dict={
+  "title": "My Homework",
+  "body": "I am learning requests!",
+  "userId": 2,
+  "id": 102
+}
+post_data=requests.post("https://jsonplaceholder.typicode.com/posts",json=dict)
+print(post_data.json())

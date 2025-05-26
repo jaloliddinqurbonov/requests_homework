@@ -29,3 +29,10 @@ Your implementation below:
 """
 
 # Your implementation here
+import requests
+import json
+def get_comments_by_post(post_id, limit=3):
+    response=requests.get(f'https://jsonplaceholder.typicode.com/comments/{post_id}')
+    data=response.json()
+    return data
+print(get_comments_by_post(1))

@@ -17,5 +17,11 @@ Expected output should demonstrate:
 
 Your implementation below:
 """
+import api_client as ap
+import requests
+import json
+print(ap.safe_get_post(1))
+
+
 
 # Your implementation here

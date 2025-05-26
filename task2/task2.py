@@ -32,3 +32,12 @@ Your implementation below:
 """
 
 # Your implementation here
+import requests
+import json
+post_id=int(input('id ni krit lanati '))
+post_data=requests.get(f'https://jsonplaceholder.typicode.com/posts/{post_id}')
+response=post_data.status_code
+if response==200:
+    print({"success":True,"data":post_data.json()})
+else:
+    print({"succes":False,"massege":"Filed to get data"})
